@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+</head>
+<body>
+
+    <main>
+        <label for="todoId">To-Do Id</label>
+        <input type="text" id="todoId" class="flash active">
+
+        <button type="button" id="infoButton">Display Info</button>
+        <a href="new_todo.html"><button type="button" id="cancel">cancel</button></a>
+
+        
+        <p id="info">
+
+        </p>
+
+        <form>
+            <label for="userId">User ID:</label>
+            <input type="text" class="flash active" id="userId">
+
+            <label for="title">Title:</label>
+            <input type="text" class="flash active" id="title">
+
+            <label for="completed">Completed:</label>
+            <input type="text" class="flash active" id="completed">
+
+            <button type="button" id="updateButton">Update Info</button>
+        </form>
+    </main>
+
+    <p id="updateInfo">
+
+    </p>
+
+    <script src="edit.js"></script>
+    
+</body>
+</html>
