@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     infoButton.addEventListener('click', displayData)
     updateButton.addEventListener('click', getData)
-    cancel.addEventListener('click', () => {
-        
-    })
 
 })
 
@@ -39,7 +36,8 @@ function getData(){
     fetch('https://jsonplaceholder.typicode.com/todos/' + endpoint, requestOptions)
     .then(response => response.json())
     .then(data => {
-        let info = `<strong> User Id: </strong> ${data.userId} <strong> Id: </strong>${data.id} 
+        const info = `
+        <strong> User Id: </strong> ${data.userId} <strong> Id: </strong>${data.id} 
         <strong> Title: </strong>${data.title} <strong> Completed: </strong>${data.completed}`
         displayInfo.innerHTML = info
     })
@@ -54,7 +52,8 @@ function displayData(){
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        let info = `<strong> User Id: </strong> ${data.userId} <strong> Id: </strong>${data.id} 
+        let info = `
+        <strong> User Id: </strong> ${data.userId} <strong> Id: </strong>${data.id} 
         <strong> Title: </strong>${data.title} <strong> Completed: </strong>${data.completed}`
         displayInfo.innerHTML = info
     })
